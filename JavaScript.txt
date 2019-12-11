@@ -1,0 +1,41 @@
+1.函数
+    函数本身是一种对象，而且它还可以创建对象，也可以对对象进行操作。
+1.1 创建函数的两种方法：
+    1.1.1函数声明法：
+               基本结构： function 函数名（参数）{函数体}
+   		function mind (function){
+ 				console.log(function);
+   				alert(function);	}
+    1.1.2函数表达式法：
+               基本结构：var 对象名 = function（参数）{函数体}
+	                 var log = function（functiion）{
+				console.log(function);
+				alert(function);  
+     总结：JS中所有的数据只有两种存在形式  对象属性&变量 无论是对象属性还是变量属性都是名值对的结构
+                  函数声明法中首先创建了函数，又创建了跟函数同名的变量，并将创建出来的函数赋值给了这个变量，
+                 函数表达式法创建一个匿名函数，然后再赋值给定义的变量。
+	两种方法并没有本质上的差异，前者是
+					函数+变量+赋值
+				    后者是
+
+					变量+函数+赋值
+1.2 函数的闭包
+    1.2.1 函数相当于一个存有现有数据的内存，函数体定义的数据只能是函数体内部使用，而外部无法使用，闭包就是
+             用外部定义的函数取代函数完成对内部函数在外部的调用，又不会损害内部数据的一种方法。
+	即：
+	    function f(s){
+			.....}
+	    var f1=f(s);
+	     f1(...); 	
+1.3 创建函数
+    1.3.1 首先创建一个function类型的Car，然后使用它新建一个object类型的car实例对象。在新建car对象时首先会新建
+        Car类型的空对象car，然后再将Car函数作为对象来调用
+	  function Car(name,ccolor){
+                         this.name=name;
+                         this.ccolor=ccolor;
+                    }
+                    var car=new Car("MTing","orange");
+                    88alert(car.name +","+car.ccolor);
+
+                  
+	               

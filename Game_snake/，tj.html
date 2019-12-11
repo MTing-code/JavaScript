@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cancas画边框样式不一样的矩形</title></head><body>
+<canvas id="canvas" width="1000" height="1000" style="align-content: center"></canvas>
+<body>
+<script>
+    var canvas = document.getElementById('canvas');
+    var function ctx()={
+        var ctx = canvas.getContext('2d');
+        //左边框
+        ctx.beginPath();
+        ctx.moveTo(300, 300);
+        ctx.lineTo(300, 1000);
+        ctx.closePath(); //闭合路径
+        ctx.lineWidth = 12; //线的边框为10像素
+        ctx.strokeStyle = 'black';
+        ctx.stroke(); //绘制定义的图形
+        // 下边框
+        ctx.beginPath();
+        ctx.moveTo(300, 1000);
+        ctx.lineTo(1000, 1000);
+        ctx.closePath(); //闭合路径
+        ctx.lineWidth = 12; //线的边框为10像素
+        ctx.strokeStyle = 'black';
+        ctx.stroke(); //绘制定义的图形
+        // 右边框
+        ctx.beginPath();
+        ctx.moveTo(1000, 1000);
+        ctx.lineTo(1000,300);
+        ctx.closePath(); //闭合路径
+        ctx.lineWidth = 12; //线的边框为10像素
+        ctx.strokeStyle = 'black';
+        ctx.stroke(); //绘制定义的图形
+        // 上边框
+        ctx.beginPath();
+        ctx.moveTo(1000, 300);
+        ctx.lineTo(300, 300);
+        ctx.closePath(); //闭合路径
+        ctx.lineWidth = 12; //线的边框为10像素
+        ctx.strokeStyle = 'black';
+        ctx.stroke(); //绘制定义的图形
+        tx.rect(10, 10, 170, 170);
+        ctx.fillStyle = "pink";
+        ctx.fill();}
+</script>
+<p>
+    canvas 有两个属性:width&height</br>
+            一个方法getContext
+
+</p>
+</body>
+</html>
